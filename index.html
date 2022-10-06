@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display a map on a webpage</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<link href="styles.css" rel="stylesheet">
+<script src = "./app/index.js"></script>
+<style>
+  body { margin: 0; padding: 0; }
+  #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+  </style>
+</head>
+<body>
+  .
+  <div class="row">
+    <div class = "col-2">
+      
+      <div className="search-container form-group">
+
+          <input
+              class = "form-control " 
+              id = "busqueda"
+              type="text" 
+              placeholder="Buscar lugar..."
+          />
+
+          <ul class = "pointer" id = "ulList" className="list-group mt-3">
+          </ul>
+          <button hidden id = "btnBuscar" type = "button" class=" m-2 form-control text-center btn btn-primary" onclick="buscar()">Buscar</button>
+
+          <button id = "btnCargar" type = "button" class=" m-2 form-control btn btn-primary" onclick="iniciar()">Iniciar Mapa</button>
+
+        
+      </div>
+      
+  
+    </div>
+    <div class="col">
+      <div id="map"></div>
+
+    </div>
+
+
+</div>
+  
+</body>
+</html>
